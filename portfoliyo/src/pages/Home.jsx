@@ -24,9 +24,15 @@ const Home = () => {
     contactForm.scrollIntoView({ behavior: "smooth" });
   };
   const show = () => {
-    setIshows((prev)=> !prev)
-   
+    setIshows((prev) => !prev);
   };
+
+  const handleClick = () => {
+    const gmailComposeUrl =
+      "https://mail.google.com/mail/?view=cm&fs=1&to=lokeshkumawat288g@gmail.com";
+    window.open(gmailComposeUrl, "_blank");
+  };
+
   return (
     <div>
       <nav>
@@ -35,10 +41,9 @@ const Home = () => {
             <h1>Portfolio</h1>
           </div>
           <a href="#" onClick={show} className="menu">
-            {/* Menu */}
-         X
+            {/* Menu */}X
           </a>
-          <div className="links"  style={{ left: shows ? "0" : "-100%" }}>
+          <div className="links" style={{ left: shows ? "0" : "-100%" }}>
             <a href="" onClick={Home}>
               Home
             </a>
@@ -53,7 +58,7 @@ const Home = () => {
             </a>
           </div>
           <div className="contect-btn">
-            <button onClick={scrollToContact}>Contact</button>
+            <button onClick={handleClick}>Contact</button>
           </div>
         </div>
       </nav>
@@ -66,11 +71,14 @@ const Home = () => {
             Also with backend part too.
           </p>
           <div className="hire-btn">
-            <button>Hire</button>
+            <button onClick={handleClick}>Hire</button>
           </div>
         </div>
         <div className="photo-box">
-          <img src="profile.png" alt="" />
+          <img
+            src="https://masai-resume-builder-user-data.s3.ap-south-1.amazonaws.com/test/profile-image/65a537d3ff141f2712beaf26/Kk7S.jpeg"
+            alt=""
+          />
         </div>
       </div>
       <div className="type-of-works">
@@ -154,7 +162,10 @@ const Home = () => {
             </p>
             <div className="resume">
               {" "}
-              <button>Resume file</button>
+              <a href="https://drive.google.com/file/d/1vWW1Yo0P2HxZ97mYv-ypJLO_IUMBts4g/view?usp=sharing">
+                {" "}
+                <button>Resume file </button>
+              </a>
             </div>
           </div>
         </div>
@@ -166,20 +177,49 @@ const Home = () => {
           <div className="project-box1">
             <div className="img-project">
               <img
-                src="https://pawantech12.github.io/portfolio-website/images/currency-converter.png"
+                src="https://codewithfaraz.com/img/Quiz%20Application%20with%20HTML,%20CSS,%20and%20JavaScript.jpg"
                 alt=""
               />
             </div>
             <div className="project-name">
-              <p>Converter App</p>
+              <p>Quiz App</p>
             </div>
             <div className="what-use">
-              <span>HTML&CSS </span> <span>JavaScript </span>{" "}
-              <span>Website</span>
+              <a href="https://github.com/LokeshKumawat2003/quiz-app/tree/main/quize-app">
+                {" "}
+                <span>Github</span>{" "}
+              </a>{" "}
+              <a href="https://66d5cf43176d6900a74111d5--sprightly-empanada-d06237.netlify.app/">
+                <span>Demo </span>
+              </a>{" "}
+              <span>React</span>
             </div>
           </div>
 
           <div className="project-box1">
+            <div className="img-project">
+              <img
+                src="https://i0.wp.com/appstle.com/wp-content/uploads/2024/04/The-Nordstrom-Loyalty-Program-Breakdown_-What-You-Can-Learn.png?fit=1532%2C886&ssl=1"
+                alt=""
+              />
+            </div>
+            <div className="project-name">
+              <p>Nordstrom App</p>
+            </div>
+            <div className="what-use">
+              <a href="https://github.com/LokeshKumawat2003/Nordstrom-web/tree/main/front-page">
+                {" "}
+                <span>Github</span>
+              </a>{" "}
+              <span>Html && Css </span>{" "}
+              <a href="https://662f885d74fbfb09a07baaf2--nimble-fudge-f3e736.netlify.app/">
+                {" "}
+                <span>Demo</span>
+              </a>
+            </div>
+          </div>
+
+          {/* <div className="project-box1">
             <div className="img-project">
               <img
                 src="https://pawantech12.github.io/portfolio-website/images/currency-converter.png"
@@ -209,23 +249,7 @@ const Home = () => {
               <span>HTML&CSS </span> <span>JavaScript </span>{" "}
               <span>Website</span>
             </div>
-          </div>
-
-          <div className="project-box1">
-            <div className="img-project">
-              <img
-                src="https://pawantech12.github.io/portfolio-website/images/currency-converter.png"
-                alt=""
-              />
-            </div>
-            <div className="project-name">
-              <p>Converter App</p>
-            </div>
-            <div className="what-use">
-              <span>HTML&CSS </span> <span>JavaScript </span>{" "}
-              <span>Website</span>
-            </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="form-box" id="contact-form">
